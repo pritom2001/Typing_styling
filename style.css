@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono&family=Neuton:wght@300;400&family=Noto+Sans&family=Nunito:ital,wght@0,400;0,600;1,200;1,300;1,600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(7, 17, 38);
+}
+.wrapper{
+    display: flex;
+}
+.text{
+    color: rgb(239, 229, 229);
+    font-size: 60px;
+
+}
+.text-ani ul{
+    list-style: none;
+    line-height: 90px;
+    height: 90px;
+
+    overflow: hidden;
+}
+
+.text-ani li{ 
+    font-size: 60px;
+    top: 0;
+    
+    color: darkred;
+    position: relative;
+    margin-left: 25px;
+    animation: slide 10s steps(4) infinite;
+}
+@keyframes slide{
+    100%{
+        top: -360px;
+    }
+}
+.text-ani li::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid darkred;
+    animation: typing 3s steps(10) infinite;
+    background-color: rgb(7, 17, 38);
+    
+    
+}
+@keyframes typing{
+    40%,
+    60%{
+        left: calc(100% + 30px);
+    }
+    100%{
+        left: 0;
+    }
+}
